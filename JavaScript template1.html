@@ -21,6 +21,18 @@
             window.alert('hi');
         }
 
+        function greetUser() {
+            var name = window.prompt("Please enter your name.");
+            var greeting = "hello " + name + ". I hope you are well today!";
+            window.alert(greeting);
+        }
+
+        function applyScripture() {
+            var name = document.getElementById('firstName').value;
+            var scripture = "I, " + name + ", having been born of goodly parents, therfore I was taught somewhat in all the learning of my father.";
+            document.getElementById('output').innerHTML = scripture;
+        }
+
     </script>
     <meta name="description" content="">
     <meta charset="utf-8">
@@ -86,9 +98,11 @@
         </tbody>
     </table>
     <!-- Comments are lame! -->
+    Please enter your name: <input type='text' id='firstName'>
+    <button type='button' onclick='applyScripture()'>Verse</button>
+    <div id='output'>This will be replaced.</div>
 
-
-
+    <button type="button" onclick="greetUser()">Hello!</button>
 
 </body>
 
