@@ -2,46 +2,46 @@
 <html lang='en-us'>
 
 
-    <head>
-        <title>My Amazing Title</title>
-        <meta name="description" content="">
-        <meta charset="utf-8">
-        <script type='text/javascript'>
-            /* input: distance in meters processomg: convert meters to miles, feet, and inches output: miles, feet, and inches */
-            function convert() {
-                //input
-                var quart = document.getElementById('quart').value;
-                //processing
-                quart = parseFloat('quart');
-                var liters = quart / 1.05668821;
+<head>
+    <title>My Amazing Title</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <script type='text/javascript'>
+        /* input: distance in meters processomg: convert meters to miles, feet, and inches output: miles, feet, and inches */
+        function convert() {
+            //input
+            var meter = document.getElementById('meter').value;
+            //processing
+            meter = parseFloat(meter);
+            var mile = meter / 1.05668821;
+
+            //output
+            var output = 'miles:' + mile + ';
+            document.getElementById('output').innerHTML = output;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    please enter your Volume in quarts: <input type='text' id='meter'><br>
+    <button type='button' onClick='convert()'>Click Me!!!</button><br>
+    <div id='output'></div>
+
+    <h1><u>Hello World</u></h1>
+
+    <h2>This class is <strong>REALLY</strong> amazing</h2>
+
+    <p>This is a paragraph about html and something </p>
 
 
-                //output
-                var output = 'Liters' + quart';
-                document.getElementById('output').innerHTML = output;
-            }
-        </script>
-
-    </head>
-
-    <body>
-        please enter your Volume in quarts: <input type='text' id='quart'><br>
-        <button type='button' onClick='convert()'>Click Me!!!</button><br>
-        <div id='output'></div>
-
-        <h1><u>Hello World</u></h1>
-
-        <h2>This class is <strong>REALLY</strong> amazing</h2>
-
-        <p>This is a paragraph about html and something </p>
-
-
-        <!-- Comments are lame! -->
+    <!-- Comments are lame! -->
 
 
 
 
-    </body>
+</body>
 
 
 
