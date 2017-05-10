@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <script type='text/javascript'>
+        /* input: distance in meters processomg: convert meters to miles, feet, and inches output: miles, feet, and inches */
+        function convert() {
+            //input
+            var mileStart = parseFloat(document.getElementById('start').value);
+            var mileEnd = parseFloat(document.getElementById('end').value);
+            var gas = parseFloat(document.getElementById('gas').value);
+            //processing
+
+
+            var ans = (mileStart - mileEnd) / gas;
+            ans = parseFloat('total')
+
+            //output
+            var output = "total:" + ans;
+            var div = document.getElementById('output');
+            div.innerHTML = output;
+        }
+
+    </script>
+    <title>
+        <h1>MPG conversion</h1>
+    </title>
+</head>
+
+<body>
+    <h1>MPG conversion</h1>
+
+    Input your Start Miles: <input type='text' id='start'>
+    <br> Input your End Miles: <input type='text' id='end'><br> Input your Gas in Gallons: <input type='text' id='gas'><button type="button" onclick="convert()">Begin Program</button>
+    <div id="output"></div>
+    <table>
+        <tbody>
+            <tr>
+                <td>Input</td>
+                <td>Processing</td>
+                <td>Output</td>
+            </tr>
+            <tr>
+                <td>miles&gas</td>
+                <td>miles/gas</td>
+                <td>Answer?</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

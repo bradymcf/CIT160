@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+
+		<!-- 
+		Input
+			User enters value in Quarts
+		Processing
+			Run computeLiters() function
+		Output
+			Output converted distances (from Quarts) into Liters.
+		-->
+		
+		
+<title>Quarts to Liters Conversion Program</title>
+<script>
+	function convert() {
+	//input
+	var input = document.getElementById('quart').value;
+	var quarts = parseInt(input);
+	
+	//proccessing
+	var liters = quarts / 1.0567;
+	
+	//output
+	var output = 'Liters: ' + liters;
+	
+	
+	var div = document.getElementById('output');
+	div.innerHTML = output;
+	}
+</script>
+</head>
+
+<body>
+<h1>Quarts to Liters Conversion</h1>
+
+Input your volume in quarts:  <input type='text' id='quart'><button type="button" onclick="convert()">Begin Program</button>
+<div id="output"></div>
+<table>
+        <tbody>
+            <tr>
+                <td>Input</td>
+                <td>Processing</td>
+                <td>Output</td>
+            </tr>
+            <tr>
+                <td>Quarts</td>
+                <td>Quarts/1.0567</td>
+                <td>?</td>
+            </tr>
+        </tbody>
+    </table></body>
+</html>
