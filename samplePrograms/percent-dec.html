@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+<head>
+    <title>Percent to decimal</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+
+
+
+    <script type='text/javascript'>
+        function convert() {
+            var num = parseFloat(document.getElementById('num').value);
+            var den = parseFloat(document.getElementById('den').value);
+
+            var per = num / den;
+
+            var output = 'Percent as a decimal: ' per;
+            document.getElementById("output").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Convert percent to decimal</h1>
+
+    <input type='number' id='num'>/ <input type='number' id='den'><br>
+    <button type='button' onClick='convert()'>Convert</button>
+    <div id='output'></div>
+</body>
+
+</html>
