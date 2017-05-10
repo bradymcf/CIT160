@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+    <head>
+        <title>My Amazing Title</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+
+        <!DOCTYPE HTML>
+        <html lang="en-us">
+            <head>
+                <meta charset="utf-8">
+
+                <!--
+Input
+User enters value in Quarts
+Processing
+Run computeLiters() function
+Output
+Output converted distances (from Quarts) into Liters.
+-->
+
+
+                <title>Optimum heart rate conversion</title>
+                <script>
+                   /*
+                   input: age
+                   processing: calculate slowRate (220-age)*.65, calculate fastRate (220-age)*.85
+                   output: slowRate, fastRate
+                   */
+                    function heartRate(){
+                        var age = parseInt(document.getElementById('age').value);
+
+                        var slowRate = 0.65 * (220-age);
+                        var fastRate = 0.85 * (220-age);
+
+                        var output = "your suggested heart rate rage should be between " + slowRate + " and " + fastRate;
+                        document.getElementById('output').innerHTML = output;
+
+                    }
+
+                </script>
+            </head>
+
+            <body>
+                <h1>Optimum heart rate conversion</h1>
+
+                Please enter your age: <input type='text' id='age'>
+                <button type='button' onClick='heartRate()'>Find your optimum heart rate</button>
+                <div id='output'></div>
+            </body>
+
+        </html>

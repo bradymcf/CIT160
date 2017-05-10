@@ -7,21 +7,21 @@
         /* input: distance in meters processomg: convert meters to miles, feet, and inches output: miles, feet, and inches */
         function convert() {
             //input
-            var mileStart = parseFloat(document.getElementById('start').value);
-            var mileEnd = parseFloat(document.getElementById('end').value);
-            var gas = parseFloat(document.getElementById('gas').value);
+            var mileStart = document.getElementById('start').value;
+            var mileEnd = document.getElementById('end').value;
+            var gas = document.getElementById('gaso').value;
             //processing
+            mileStart = parseFloat(mileStart);
+            mileEnd = parseFloat(mileEnd);
+            gas = parseFloat(gas);
 
+            var ans = ((mileEnd - mileStart) / gas).toFixed(2) + " Miles Per Gallon";
 
-            var ans = (mileStart - mileEnd) / gas;
-            ans = parseFloat('total')
 
             //output
-            var output = "total:" + ans;
-            var div = document.getElementById('output');
-            div.innerHTML = output;
-        }
 
+            document.getElementById('output').innerHTML = ans;
+        }
     </script>
     <title>
         <h1>MPG conversion</h1>
@@ -32,22 +32,9 @@
     <h1>MPG conversion</h1>
 
     Input your Start Miles: <input type='text' id='start'>
-    <br> Input your End Miles: <input type='text' id='end'><br> Input your Gas in Gallons: <input type='text' id='gas'><button type="button" onclick="convert()">Begin Program</button>
+    <br> Input your End Miles: <input type='text' id='end'><br> Input your Gas in Gallons: <input type='text' id='gaso'><button type="button" onclick="convert()">Begin Program</button>
     <div id="output"></div>
-    <table>
-        <tbody>
-            <tr>
-                <td>Input</td>
-                <td>Processing</td>
-                <td>Output</td>
-            </tr>
-            <tr>
-                <td>miles&gas</td>
-                <td>miles/gas</td>
-                <td>Answer?</td>
-            </tr>
-        </tbody>
-    </table>
+
 </body>
 
 </html>

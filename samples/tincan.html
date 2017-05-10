@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+<head>
+    <title>My Amazing Title</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+
+    <!DOCTYPE HTML>
+    <html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+
+        <!--
+Input
+User enters value in Quarts
+Processing
+Run computeLiters() function
+Output
+Output converted distances (from Quarts) into Liters.
+-->
+
+
+        <title>Optimum heart rate conversion</title>
+        <script>
+            /*
+                               input: age
+                               processing: calculate slowRate (220-age)*.65, calculate fastRate (220-age)*.85
+                               output: slowRate, fastRate
+                               */
+            function tinCanVolume() {
+                var radius = parseFloat(document.getElementById('radius').value);
+                var height = parseFloat(document.getElementById('height').value);
+
+                var volume = Math.PI * radius * radius * height;
+
+                var output = 'The volume is ' + volume;
+                document.getElementById('output').innerHTML = output;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Calculating the volume of a tin can</h1>
+
+        please enter the radius: <input type='text' id='radius'><br> please enter the height: <input type='text' id='height'><br>
+        <button type='button' onClick='tinCanVolume()'>Find Volume</button>
+        <div id='output'></div>
+    </body>
+
+    </html>

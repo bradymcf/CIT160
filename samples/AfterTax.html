@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+<head>
+    <title>My Amazing Title</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+
+    <!DOCTYPE HTML>
+    <html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+
+
+
+
+
+        <title>tax</title>
+        <script>
+            function afterTax() {
+                var pay = parseFloat(document.getElementById('pay').value);
+                var hours = parseFloat(document.getElementById('hours').value);
+
+                var tax = (pay * hours) - ((pay * hours) * 0.15);
+
+
+                var output = 'Pay after tax ' + tax;
+                document.getElementById('output').innerHTML = output;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Calculating taxes</h1>
+
+        please enter the hourly wage: <input type='text' id='pay'><br> please enter the number of hours worked: <input type='text' id='hours'><br>
+        <button type='button' onClick='afterTax()'>Calculate Tax</button>
+        <div id='output'></div>
+    </body>
+
+    </html>
