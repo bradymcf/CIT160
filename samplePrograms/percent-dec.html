@@ -16,7 +16,7 @@
 
             var per = num / den;
 
-            var output = 'Percent as a decimal: ' per;
+            var output = 'Percent as a decimal: ' + per;
             document.getElementById("output").innerHTML = output;
         }
 
@@ -26,7 +26,7 @@
 <body>
     <h1>Convert percent to decimal</h1>
 
-    <input type='number' id='num'>/ <input type='number' id='den'><br>
+    <input type='text' id='num'> / <input type='text' id='den'><br>
     <button type='button' onClick='convert()'>Convert</button>
     <div id='output'></div>
 </body>
