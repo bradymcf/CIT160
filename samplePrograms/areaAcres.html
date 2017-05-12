@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+    <head>
+        <title>Acres</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+
+
+
+        <script type='text/javascript'>
+            function convert() {
+                /*
+                input: acres
+                processing: compute to  sqft
+                output: sqft
+                */
+
+                var acre = parseFloat(document.getElementById('acre').value);
+
+
+                var sqft = acre * 43560;
+
+                var output = sqft + ' sqft in' + acre + ' acres';
+                document.getElementById("output").innerHTML = output;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Convert Acres to sqft</h1>
+
+        Input number of acres:<input type='text' id='acre'>
+        <button type='button' onClick='convert()'>Convert</button>
+        <div id='output'></div>
+    </body>
+
+</html>
