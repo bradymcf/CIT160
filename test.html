@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>How Many Acres?</title>
+    <script type="text/javascript">
+        /*
+                                input: width, length
+                                processing: equation
+                                output: total area of acres
+                                */
+        function convert() {
+            var width = parseFloat(document.getElementById('width').value);
+
+            var length = parseFloat(document.getElementById('length').value);
+
+            var acre = (width * length) / 43560;
+
+
+
+
+
+            var output = acre;
+            document.getElementById("output").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>How Many Acres?</h1>
+    Width (feet) <input type="text" id="width"><br> Length (feet) <input type="text" id="length"><br>
+    <button type="button" onclick="convert()">Acres</button><br> Size (acres)
+    <div id="output"></div>
+</body>
+
+</html>
