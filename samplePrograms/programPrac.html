@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+<head>
+
+    <meta name="description" content="">
+    <meta charset="utf-8">
+
+
+
+
+    <title>if else if</title>
+    <script type="text/javascript">
+        function absolute() {
+            var iLikeTurtles = document.getElementById('num1').value;
+            var iLikeFish = document.getElementById('fish').value;
+
+            var answer = iLikeTurtles - iLikeFish;
+            if(answer <0){
+                answer*=-1;
+            }
+
+            document.getElementById('output').innerHTML = answer;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>if else if</h1>
+
+    please enter a number: <input type='text' id='num1'><br> please enter a number: <input type='text' id='fish'><br>
+    <button type='button' onClick='absolute()'>click me</button>
+    <div id='output'></div>
+</body>
+
+</html>
