@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+    
+<head>
+
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    
+    <title>Foot wear</title>
+        <script type='text/javascript'>
+            
+            function myFunction() {
+                var letter = document.getElementById("myInput").value;
+                var text;
+
+                // If the answer is "hot"
+                if (letter === "hot") {
+                    text = "sandals";
+
+                    // If the answer is 'rain'
+                } else if (letter === "rain") {
+                    text = "galoshes";
+
+                    // If the answer is 'snow'
+                } else if (letter === 'snow'){
+                    text = "boots";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </head>
+
+
+
+ 
+
+    <body>
+        <h1>Footweat Decider</h1>
+        <p>Enter todays weather as hot, rain, or snow.</p>
+
+        <input id="myInput" type="text">
+
+        <button onclick="myFunction()">Click</button>
+
+        <p id="demo"></p>
+
+       
+
+    </body>
+</html>
