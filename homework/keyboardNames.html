@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+    <head>
+
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <title>if else if</title>
+        <script type="text/javascript">
+            /*
+            input: name of student and number of credits
+            processing: calculate number of credits to grade year
+            output: output grade year
+            */
+            function grade(){
+
+            //input
+            var name = document.getElementById('name').value;
+            var credits = document.getElementById('credits').value;
+            //processing
+            var grade;
+            if(credits <= 30 && (credits < 30)){
+                grade = 'freshman';
+            } else if(credits >= 30 &&(credits < 60)){
+                grade = 'sophomore';
+            } else if(credits >= 60 &&(credits < 90)){
+                grade = 'junior';
+            } else if(credits >= 90){
+                grade = 'Senior';
+            }
+            //output
+            document.getElementById('output').innerHTML = name + ' your grade is ' + grade;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>if else if</h1>
+
+        Please enter your name: <input type='text' id='name'><br> Please enter your number of credits: <input type='text' id='credits'><br>
+        <button type='button' onClick='grade()'>Enter</button>
+        <div id='output'></div>
+    </body>
+
+</html>

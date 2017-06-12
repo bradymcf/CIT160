@@ -8,10 +8,44 @@
 
     <title>Math Skills</title>
     <script type='text/javascript'>
+<<<<<<< HEAD
        var answer = input1 + input2 ;
         if(answer = true){
             
         }
+=======
+        function equate() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var operator = parseInt(document.getElementById("operator").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var yourAnswer = parseInt(document.getElementById("yourAnswer").value);
+            var correct = 'Correct! Good Job!'
+            var incorrect = 'Incorect. Try Again!'
+            var answer;
+
+            if (operator == "+") {
+                answer = num1 + num2;
+
+            } else if (operator == '-') {
+                answer = num1 - num2;
+
+            } else if (operator == "*") {
+                answer = num1 * num2;
+
+            }
+            else if (operator == "/"){
+                answer = num1/num2;
+            }
+            if (answer == yourAnswer){
+                answer = correct;
+            }
+            else if (answer != yourAnswer){
+                answer = incorrect;
+            }
+            document.getElementById("output").innerHTML = answer;
+        }
+
+>>>>>>> origin/master
     </script>
 </head>
 
@@ -21,6 +55,7 @@
 
 <body>
     <h1>Test Your Math Skills!</h1>
+<<<<<<< HEAD
     <p>Enter your math equation and see if you are right.</p>
 
     <input type='text' id='input1'>
@@ -31,6 +66,18 @@
     <button onclick="myFunction()">Click</button>
 
     <p id="demo"></p>
+=======
+    <p>Enter your math problem</p>
+
+    <input id="num1" type="text" size='4'>
+    <input id="operator" type="text" size='3'>
+    <input id="num2" type="text" size='4'>=
+    <input id="yourAnswer" type="text" size='4'>
+
+    <button onclick="equate()">Click</button>
+    <div id='output'></div>
+
+>>>>>>> origin/master
 
 
 

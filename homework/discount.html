@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+
+
+    <head>
+
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <title>if else if</title>
+        <script type="text/javascript">
+        /*
+        input: subtotal
+        proccessing: calculate discount for tue/wed if > 50. add sales tax
+        output: ouput total
+        */
+
+        function calcualteTotal(){
+            //input
+            var subtotal = parseFloat(document.getElementById('subtotal').value);
+
+            var dayOfWeek = new Date().getDay();
+            dayOfWeek = 2;
+            //processing
+            if((subtotal > 50) && (dayOfWeek == 2 || dayOfWeek==3)){
+                subtotal*=.9;
+            }
+            subtotal*= 1.06;
+            //output
+            document.getElementById('output').innerHTML = subtotal.toFixed(2);
+
+}
+
+        </script>
+    </head>
+
+    <body>
+
+
+        please enter your subtotal: <input type='text' id='subtotal'><br> <br>
+        <button type='button' onClick='calcualteTotal()'>click me</button>
+        <div id='output'></div>
+    </body>
+
+</html>
