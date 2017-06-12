@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>times tables</title>
+
+    <script type="text/javascript">
+        /* 
+                input:
+                process:
+                output: times tables
+                */
+
+        function TimesTable() {
+            var display = ""; // The table output HTML
+
+            for (i = 1; i <= 12; i++) {
+                var multiplier = 5;
+                var result = i * 5;
+
+                display += multiplier + " * " + i + " = " + result + "<br>"; //Add each line to our output HTML
+            }
+
+            document.getElementById("outputDiv").innerHTML = display;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <h1>Five Times Table From 1 - 12.</h1>
+    <h2>Press the button to display the table.</h2>
+    <button type="button" onclick="TimesTable()">Times Table</button>
+    <div id="outputDiv"></div>
+</body>
+</html>

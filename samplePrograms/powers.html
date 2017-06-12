@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Powers of 2</title>
+
+    <script type="text/javascript">
+        /* 
+                input:
+                process:
+                output: powers
+                */
+
+        function power() {
+            var display = ""; // The table output HTML
+
+            for (i = 2;) {
+                var multiplier = 5;
+                var result = i * 5;
+
+                display += multiplier + " * " + i + " = " + result + "<br>"; //Add each line to our output HTML
+            }
+
+            document.getElementById("outputDiv").innerHTML = display;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Powers of 2</h1>
+    <h2>Press the button to display the table.</h2>
+    <button type="button" onclick="power()">Powers of 2</button>
+    <div id="outputDiv"></div>
+</body>
+</html>

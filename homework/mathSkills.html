@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html lang='en-us'>
-    
+
 <head>
 
     <meta name="description" content="">
     <meta charset="utf-8">
-    
+
     <title>Math Skills</title>
-        <script type='text/javascript'>
+    <script type='text/javascript'>
+       var answer = input1 + input2 ;
+        if(answer = true){
             
-            function myFunction() {
-                var letter = document.getElementById("myInput").value;
-                var text;
-
-                // If the answer is "hot"
-                if (letter === "hot") {
-                    text = "sandals";
-
-                    // If the answer is 'rain'
-                } else if (letter === "rain") {
-                    text = "galoshes";
-
-                    // If the answer is 'snow'
-                } else if (letter === 'snow'){
-                    text = "boots";
-                }
-                document.getElementById("demo").innerHTML = text;
-            }
-        </script>
-    </head>
+        }
+    </script>
+</head>
 
 
 
- 
 
-    <body>
-        <h1>Test Your Math Skills!</h1>
-        <p>Enter todays weather as hot, rain, or snow.</p>
 
-        <input id="myInput" type="text">
-         <input id="myInput" type="text">
-         <input id="myInput" type="text">
+<body>
+    <h1>Test Your Math Skills!</h1>
+    <p>Enter your math equation and see if you are right.</p>
 
-        <button onclick="myFunction()">Click</button>
+    <input type='text' id='input1'>
+    <input type='text' id='input2'>
+    <input type='text' id='input3'>=
+    <input type='text' id='input'>
 
-        <p id="demo"></p>
+    <button onclick="myFunction()">Click</button>
 
-       
+    <p id="demo"></p>
 
-    </body>
+
+
+</body>
+
 </html>

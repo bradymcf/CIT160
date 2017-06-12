@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Repetition</title>
+ 
+<script type="text/javascript">
+/*
+Write a defining table and a program that asks the user for an integer n and then outputs the sum of all the odd integers between 1 and n, inclusive.
+ 
+   Input: user inputs n
+   Processing:
+   Output:  sum of all the odd integers between 1 and n
+     
+ */
+function sum() {
+ 
+  var number = parseInt(document.getElementById('box').value);
+ 
+  var i;
+  var result;
+ 
+  if(number < 1) {
+    return 0;
+  }
+ 
+  result = 0;
+  for(i = number - 1; i > 0; i--) {
+      if(i % 2 != 0) {
+          result = result + i;
+     }
+  }
+ 
+  document.getElementById('outputdiv').innerHTML = result;
+}
+ 
+</script>
+</head>
+<body>
+  <h1>Enter a number!</h1>
+  <input type="text" id="box" size="3" value="0"><br>    
+  <button type="button" onclick="sum()">Go!</button>  
+  <div id="outputdiv"></div>
+</body>
+</html>
